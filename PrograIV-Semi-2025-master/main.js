@@ -13,7 +13,7 @@ createApp({
             departamento: '',
             municipio: '',
             fechaNacimiento: '',
-            modoEdicion: false, // Controla si estamos editando un alumno
+            modoEdicion: false, 
             departamentos: [
                 "Ahuachapán", "Santa Ana", "Sonsonate", "Chalatenango", "La Libertad",
                 "San Salvador", "Cuscatlán", "La Paz", "Cabañas", "San Vicente",
@@ -55,7 +55,7 @@ createApp({
     methods: {
         cargarMunicipios() {
             this.municipios = this.listaMunicipios[this.departamento] || [];
-            this.municipio = ''; // Resetear municipio al cambiar de departamento
+            this.municipio = ''; 
         },
         eliminarAlumno(alumno) {
             if (confirm(`¿Está seguro de eliminar el alumno ${alumno.nombre}?`)) {
@@ -95,10 +95,10 @@ createApp({
             };
 
             if (this.modoEdicion) {
-                // Editar alumno existente
+               
                 localStorage.setItem(this.codigo, JSON.stringify(alumno));
             } else {
-                // Validar que no exista un alumno con el mismo código antes de agregar
+                
                 if (localStorage.getItem(this.codigo)) {
                     alert("El código ya existe. Usa otro.");
                     return;
