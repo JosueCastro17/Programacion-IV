@@ -1,0 +1,152 @@
+/* 🎨 Variables globales */
+:root {
+    --primary-color: #6C63FF; /* Morado vibrante */
+    --primary-dark: #5548d3;
+    --secondary-color: #FF6584; /* Rosa llamativo */
+    --secondary-dark: #d24e6e;
+    --success-color: #28C76F; /* Verde éxito */
+    --danger-color: #EA5455; /* Rojo alerta */
+    --warning-color: #FF9F43; /* Naranja */
+    --background-color: #F8FAFD; /* Fondo claro */
+    --text-dark: #2C2C54; /* Texto oscuro */
+    --white: #FFFFFF;
+}
+
+/* 🌟 Estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+/* 📌 Contenedor principal */
+.container-fluid {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 🎨 Tarjeta del formulario */
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+    background: var(--white);
+}
+
+.card-header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 15px 15px 0 0;
+    padding: 18px;
+}
+
+/* 📝 Campos del formulario */
+.form-control {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0px 0px 8px rgba(255, 101, 132, 0.5);
+}
+
+/* 📌 Botones */
+.btn {
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-dark);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: var(--white);
+}
+
+.btn-success:hover {
+    background-color: #1fa259;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    background-color: #c73c3d;
+}
+
+/* 📋 Tabla de registros */
+.table {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 14px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f0f0f5;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* 🔍 Barra de búsqueda */
+.search-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.search-box input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0px 0px 8px rgba(255, 101, 132, 0.5);
+}
