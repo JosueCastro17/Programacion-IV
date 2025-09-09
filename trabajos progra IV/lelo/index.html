@@ -31,36 +31,45 @@
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" @click="abrirFormulario('alumno')" href="#">Alumno</a>
+                                <a class="nav-link" @click="abrirFormulario('libro')" href="#">libro</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" @click="abrirFormulario('materia')" href="#">Materia</a>
+                                <a class="nav-link" @click="abrirFormulario('autor')" href="#">autor</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" @click="abrirFormulario('docente')" href="#">Docente</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" @click="abrirFormulario('usuario')" href="#">Usuario</a>
+                            </li>
+                         
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
         <div class="container-fluid" id="appSistema">
-            <alumno v-show="forms.alumno.mostrar" :forms="forms" ref="alumno" @buscar="buscar('buscaralumno', 'listarAlumnos')"></alumno>
-            <buscaralumno v-show="forms.buscarAlumno.mostrar" ref="buscaralumno" @modificar="modificar('alumno', 'modificarAlumno', $event)"></buscaralumno>
-            <materia v-show="forms.materia.mostrar" :forms="forms" ref="materia" @buscar="buscar('buscarmateria', 'listarMaterias')"></materia>
-            <buscarmateria v-show="forms.buscarMateria.mostrar" ref="buscarmateria" @modificar="modificar('materia', 'modificarMateria', $event)"></buscarmateria>
+            <libro v-show="forms.libro.mostrar" :forms="forms" ref="libro" @buscar="buscar('buscarlibro', 'listarlibros')"></libro>
+            <buscarlibro v-show="forms.buscarlibro.mostrar" ref="buscarlibro" @modificar="modificar('libro', 'modificarlibro', $event)"></buscarlibro>
+            <autor v-show="forms.autor.mostrar" :forms="forms" ref="buscarAutor" @buscar="buscar('buscarautor', 'listarautors')"></autor>
+            <buscarAutor v-show="forms.buscarautor.mostrar" ref="buscarAutor" @modificar="modificar('autor', 'modificarautor', $event)"></buscarAutor>
+            <usuario v-show="forms.usuario.mostrar" :forms="forms" ref="usuario" @buscar="buscar('buscarusuario', 'listarUsuarios')"></usuario>
+            <buscarusuario v-show="forms.buscarUsuario.mostrar" ref="buscarusuario" @modificar="modificar('usuario', 'modificarUsuario', $event)"></buscarusuario>
+            <login v-show="forms.login.mostrar"></login>
+
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="componentes/busqueda_alumnos.js"></script>
-    <script src="componentes/alumnos.js"></script>
-    <script src="componentes/busqueda_materias.js"></script>
-    <script src="componentes/materias.js"></script>
+    <script src="componentes/busqueda_libros.js"></script>
+    <script src="componentes/libros.js"></script>
+    <script src="componentes/busqueda_autors.js"></script>
+    <script src="componentes/autores.js"></script>
+    <script src="componentes/busqueda_usuarios.js"></script>
+    <script src="componentes/usuarios.js"></script>
+    <script src="componentes/login.js"></script>
     <script src="main.js"></script>
 </body>
 

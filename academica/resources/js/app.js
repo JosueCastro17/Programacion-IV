@@ -1,14 +1,15 @@
-const {createApp, ref} = Vue;
-const {v4: uuidv4} = uuid;
-const Dexie = window.Dexie,
-    db = new Dexie('db_academico');
+import './bootstrap';
+import { createApp } from 'vue';
+import Dexie from 'dexie';
+import alumno from './components/AlumnoComponent.vue';
+import buscar_alumno from './components/BusquedaAlumnoComponent.vue';
+
+window.db = new Dexie('db_academico');
 
 const app = createApp({
     components: {
         alumno,
-        materia,
-        buscaralumno,
-        buscarmateria
+        buscar_alumno
     },
     data() {
         return {
